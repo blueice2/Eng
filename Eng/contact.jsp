@@ -369,8 +369,8 @@ function validate_link_jsp_cookie(){
     
       try {
          Class.forName("org.postgresql.Driver");
-         c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/store", "postgres", "raspberry");
-         
+
+          c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sewa", "tyui_1", "jigger");
          
 	 preparedStatement = c.prepareStatement(query1);
 	  preparedStatement.setString(1, shop_user_name);
@@ -415,7 +415,8 @@ function validate_link_jsp_cookie(){
   if(department.equals( "production_view") && contact_password.equals( shop_user_password)){
    // Proceed to production3.jsp
    	  // New location to be redirected
-         String site = new String("http://13.53.61.254:8080/fumi/production3.jsp");
+         String site = new String("http://15.45.21.246:8080/fumi/production3.jsp");
+
          response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site); 
    
@@ -610,7 +611,7 @@ function validate_link_jsp_cookie(){
 	   // New location to be redirected
 	  // out.println("<br> Department: " +department);
 	   
-         String site = new String("http://13.53.61.254:8080/fumi/production.jsp");
+         String site = new String("http://15.45.21.246:8080/fumi/production.jsp");
          response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site); 
 	  
@@ -626,7 +627,7 @@ function validate_link_jsp_cookie(){
 	   //out.println("<br> Department: " +department);
 	  
 	  // New location to be redirected
-         String site = new String("http://13.53.61.254:8080/fumi/cart.jsp");
+         String site = new String("http://15.45.21.246:8080/fumi/cart.jsp");
          response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site); 
 	  
@@ -641,7 +642,7 @@ function validate_link_jsp_cookie(){
 	   //out.println("<br> Department: " +department);
 	  
 	  // New location to be redirected
-         String site = new String("http://13.53.61.254:8080/fumi/plastirota.jsp");
+         String site = new String("http://15.45.21.246:8080/fumi/plastirota.jsp");
          response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site); 
 	  
