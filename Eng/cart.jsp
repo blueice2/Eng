@@ -137,19 +137,11 @@ f_quantity = Number(f_available) - Number(f_quantity);
  document.cookie="f_description="+f_description.split(' ').join('&*');;
 
 
-  //alert("Hello there, proceeding.....");
-  
-   //window.location.replace("http://13.53.61.254:8080/fumi/test.jsp"); 
-   
-  //window.location.assign("http://13.53.61.254:8080/fumi/remove.jsp"); 
-  
-  // use to prevent going back in history
-  // window.location.replace('https://www.exampleURL.com/');
   
   
    
 if (confirm("Do you want to remove the items") == true) {
-  window.location.assign("http://13.53.61.254:8080/fumi/remove.jsp"); 
+  window.location.assign("http://15.45.21.246:8080/fumi/remove.jsp"); 
   
 } else {
   return false;
@@ -237,18 +229,12 @@ var f_available = document.getElementById(available).textContent;
  document.cookie="f_devicename="+f_devicename.split(' ').join('&*');;
  document.cookie="f_description="+f_description.split(' ').join('&*');;
 
-
- // alert("Hello there, proceeding.....");
-  
-   //window.location.replace("http://13.53.61.254:8080/fumi/test.jsp"); 
-   
- // window.location.assign("http://13.53.61.254:8080/fumi/topup.jsp"); 
   
   // use to prevent going back in history
   // window.location.replace('https://www.exampleURL.com/');
   
   if (confirm("Do you want to top-up the items") == true) {
-  window.location.assign("http://13.53.61.254:8080/fumi/topup.jsp"); 
+window.location.assign("http://15.45.21.246:8080/fumi/topup.jsp"); 
   
 } else {
   return false;
@@ -325,8 +311,8 @@ String shop_user_password  = (String)session.getAttribute("password");
     
       try {
          Class.forName("org.postgresql.Driver");
-         cy = DriverManager.getConnection("jdbc:postgresql://localhost:5432/store", "postgres", "raspberry");
-         
+    
+           cy = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sewa", "tyui_1", "jigger");
          
 	 preparedStatementy = cy.prepareStatement(query1y);
 	  preparedStatementy.setString(1, shop_user_name);
@@ -608,7 +594,9 @@ String shop_user_password  = (String)session.getAttribute("password");
     
       try {
          Class.forName("org.postgresql.Driver");
-         c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/store", "postgres", "raspberry");
+       
+
+  c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sewa", "tyui_1", "jigger");
 	 
 	// out.println("<br> Connection gotten ");
          
