@@ -289,7 +289,8 @@ else if(description ==null || description == ""){
     
       try {
          Class.forName("org.postgresql.Driver");
-         c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/store", "postgres", "raspberry");
+         
+ c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sewa", "tyui_1", "jigger");
          
          
 	 preparedStatement = c.prepareStatement(query1);
@@ -479,7 +480,7 @@ else if(description ==null || description == ""){
 	   out.println("<br> Please click on the search tab to continue" );
 	  
 	  // New location to be redirected
-         String site = new String("http://13.53.61.254:8080/fumi/cart.jsp");
+         String site = new String("http://15.45.21.246:8080/fumi/cart.jsp");
          response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site); 
 	  
