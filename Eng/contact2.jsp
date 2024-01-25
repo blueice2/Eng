@@ -148,10 +148,10 @@
   
    // To connect to the database
   
-  // Load postgresql Driver. The jar file was downloaded and placed in the lib folder of tomcat server
+  // Load sql Driver. The jar file was downloaded and placed in the lib folder of tomcat server
   
   try {
-  Class.forName("org.postgresql.Driver"); 
+  Class.forName("org.sql.Driver"); 
   }
   catch(Exception e){out.println( e.getClass().getName()+": "+ e.getMessage() );
     }
@@ -168,8 +168,10 @@
     	
     
       try {
-         Class.forName("org.postgresql.Driver");
-         c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/store", "postgres", "raspberry");
+         Class.forName("org.sql.Driver");
+c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sewa", "tyui_1", "jigger");
+
+        
          
          
 	  preparedStatement = c.prepareStatement(query1);
@@ -215,7 +217,7 @@
          c.close();
 	 
 	 // New location to be redirected
-         String site = new String("http://13.53.61.254:8080/fumi/contact.jsp");
+         String site = new String("http://15.45.21.246:8080/fumi/contact.jsp");
          response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site); 
 	 
