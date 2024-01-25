@@ -141,9 +141,9 @@ f_quantity = Number(f_available) - Number(f_quantity);
 
   alert("Hello there GFG");
   
-   //window.location.replace("http://13.53.61.254:8080/fumi/test.jsp"); 
+   //window.location.replace("http://15.45.21.246:8080/fumi/test.jsp"); 
    
-  window.location.assign("http://13.53.61.254:8080/fumi/remove.jsp"); 
+  window.location.assign("http://15.45.21.246:8080/fumi/remove.jsp"); 
   
   // use to prevent going back in history
   // window.location.replace('https://www.exampleURL.com/');
@@ -375,7 +375,8 @@ window.onpopstate = function () {
     
       try {
          Class.forName("org.postgresql.Driver");
-         c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/store", "postgres", "raspberry");
+      
+c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sewa", "tyui_1", "jigger");
          
          
 	 preparedStatement = c.prepareStatement(query1);
